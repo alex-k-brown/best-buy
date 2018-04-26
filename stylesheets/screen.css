@@ -200,6 +200,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 17, ../sass/_header.scss */
+.logo,
+.social-icon,
+.close {
+  cursor: pointer;
+}
+
+/* line 22, ../sass/_header.scss */
 .logo {
   width: 11.9em;
   height: 8.1em;
@@ -208,7 +215,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   left: 3.1em;
 }
 
-/* line 24, ../sass/_header.scss */
+/* line 29, ../sass/_header.scss */
 .social {
   background-color: white;
   right: 0;
@@ -217,37 +224,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-top-left-radius: 4em;
   border-bottom-left-radius: 4em;
 }
-/* line 33, ../sass/_header.scss */
+/* line 38, ../sass/_header.scss */
 .social.closed .close {
   animation: rotate .25s ease-out 0s forwards;
 }
-/* line 37, ../sass/_header.scss */
+/* line 42, ../sass/_header.scss */
 .social.closed .facebook {
   background-image: url("../resources/images/facebook.png");
   animation: social 0.05s linear 0s forwards;
 }
-/* line 37, ../sass/_header.scss */
+/* line 42, ../sass/_header.scss */
 .social.closed .twitter {
   background-image: url("../resources/images/twitter.png");
   animation: social 0.1s linear 0s forwards;
 }
-/* line 37, ../sass/_header.scss */
+/* line 42, ../sass/_header.scss */
 .social.closed .pinterest {
   background-image: url("../resources/images/pinterest.png");
   animation: social 0.15s linear 0s forwards;
 }
-/* line 37, ../sass/_header.scss */
+/* line 42, ../sass/_header.scss */
 .social.closed .google {
   background-image: url("../resources/images/google.png");
   animation: social 0.2s linear 0s forwards;
 }
-/* line 37, ../sass/_header.scss */
+/* line 42, ../sass/_header.scss */
 .social.closed .youtube {
   background-image: url("../resources/images/youtube.png");
   animation: social 0.25s linear 0s forwards;
 }
 
-/* line 44, ../sass/_header.scss */
+/* line 49, ../sass/_header.scss */
 .social-icon,
 .close {
   margin: 0 .4em;
@@ -255,16 +262,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   display: inline-block;
   background-size: cover;
-  cursor: pointer;
 }
 
-/* line 53, ../sass/_header.scss */
+/* line 57, ../sass/_header.scss */
 .social-icon {
   width: 5.4em;
   height: 5.4em;
 }
 
-/* line 57, ../sass/_header.scss */
+/* line 61, ../sass/_header.scss */
 .close {
   width: 3.2em;
   height: 3.2em;
@@ -274,31 +280,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   animation: rotateBack .25s ease-out 0s forwards;
 }
 
-/* line 67, ../sass/_header.scss */
+/* line 71, ../sass/_header.scss */
 .facebook {
   background-image: url("../resources/images/facebook.png");
   animation: socialBack 0.05s linear 0s forwards;
 }
 
-/* line 67, ../sass/_header.scss */
+/* line 71, ../sass/_header.scss */
 .twitter {
   background-image: url("../resources/images/twitter.png");
   animation: socialBack 0.1s linear 0s forwards;
 }
 
-/* line 67, ../sass/_header.scss */
+/* line 71, ../sass/_header.scss */
 .pinterest {
   background-image: url("../resources/images/pinterest.png");
   animation: socialBack 0.15s linear 0s forwards;
 }
 
-/* line 67, ../sass/_header.scss */
+/* line 71, ../sass/_header.scss */
 .google {
   background-image: url("../resources/images/google.png");
   animation: socialBack 0.2s linear 0s forwards;
 }
 
-/* line 67, ../sass/_header.scss */
+/* line 71, ../sass/_header.scss */
 .youtube {
   background-image: url("../resources/images/youtube.png");
   animation: socialBack 0.25s linear 0s forwards;

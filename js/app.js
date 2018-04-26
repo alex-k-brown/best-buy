@@ -19,6 +19,7 @@ function menu() {
 	$('#social').toggleClass('closed');
 };
 
+// Header clic events
 $('#closed').on('click', menu);
 
 /*-- Gallery JS --*/
@@ -37,8 +38,6 @@ function slideSwitch(arrowVal, productLength) {
 	// Hide current product
 	$('#product-' + slideCounter).removeClass('active');
 	$('#product-' + slideCounter).removeClass('back-active');
-
-	console.log('slideSwitch');
 
 	// If right arrow clicked
 	if(arrowVal === 'right') {
@@ -140,4 +139,12 @@ function getProducts() {
 	});
 };
 
+function restart() {
+	console.log('restart');
+	$('#gallery').html('');
+	$('#gallery').removeClass('active');
+};
+
+// Gallery click events
 $('.category').on('click', getProducts);
+$('#logo').on('click', restart);
