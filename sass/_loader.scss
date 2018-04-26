@@ -25,3 +25,17 @@
 	background-image: url('../resources/images/spinner.png');
 	animation: spin 1s ease-out 0s infinite;
 }
+
+// Mobile Styling
+@media all and (max-width: 600px) {
+	.loader {
+		top: 22em;
+		height: calc(100% - 22em);
+	}
+	.spinner {
+	    top: calc((100% - 35em)/2);
+	    left: calc((100% - 35em)/2);
+	    width: 35em;
+	    height: 35em;
+	}
+}

@@ -38,3 +38,18 @@
 	font-size: 4.2vw;
 	font-family: pt-sans-bold, sans-serif;
 }
+
+// Mobile Styling
+@media all and (max-width: 600px) {
+	.home {
+		top: 22em;
+		height: calc(100% - 22em);
+	}
+	.category {
+		top: 35em;
+	}
+	.click {
+		top: 9em;
+		font-size: 9.2vw;
+	}
+}

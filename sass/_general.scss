@@ -77,3 +77,21 @@ $ctaOrange: #eb7400;
 		transform-origin: 50% 50%;
 	}
 }
+
+// Mobile styling
+@media all and (max-width: 600px) {
+	@keyframes social {
+		0% { width: 8.4em; margin: 0 .7em; }
+		99% { width: 8.4em; margin: 0 .7em; }
+		100% { width: 0em; margin: 0; }
+	}
+	@keyframes socialBack {
+		0% { width: 0em; margin: 0em; }
+		99% { width: 0em; margin: 0em; }
+		100% { width: 8.4em; margin: 0 .7em; }
+	}
+
+	.container {
+		height: 160em;
+	}
+}

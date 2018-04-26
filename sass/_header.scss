@@ -73,3 +73,30 @@ $backTime: .25s, .2s, .15s, .1s, .05s;
 		animation: socialBack #{nth($socialTime, $i)} linear 0s forwards;
 	}
 }
+
+// Mobile styling
+@media all and (max-width: 600px) {
+	.header {
+		height: 22em;
+	}
+	.logo {
+		width: 22.9em;
+		height: 16.1em;
+		top: 3.2em;
+
+	}
+	.social {
+		padding: 1.8em 1.4em;
+		top: 4.4em;
+	}
+	.social-icon {
+		width: 8.4em;
+		height: 8.4em;
+		margin: 0 .7em;
+	}
+	.close {
+	    margin: 1.7em 1em 1.1em 1.8em;
+	    width: 5.2em;
+	    height: 5.2em;
+	}
+}

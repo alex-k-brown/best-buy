@@ -27,10 +27,10 @@ $('#closed').on('click', menu);
 var slideCounter = 0;
 
 // Add product to gallery
-function addProduct(product, n) {
+function addProduct(product, n, categoryChoice) {
 
 	// Append products
-	$('#gallery').append('<div id="product-' + n + '" class="product"><div class="image-container"><img src="' + product.image + '" class="product-image"></div><div class="product-info"><div class="info-container"><div class="product-price">$' + product.regularPrice + '</div><div class="product-name">' + product.name + '</div><div class="product-description">' + product.shortDescription + '</div><a href="' + product.url + '" target="_blank" class="product-cta">Shop Now</div></div></div></div>');
+	$('#gallery').append('<div id="product-' + n + '" class="product product-' + categoryChoice + '"><div class="image-container"><img src="' + product.image + '" class="product-image"></div><div class="product-info"><div class="info-container"><div class="product-price">$' + product.regularPrice + '</div><div class="product-name">' + product.name + '</div><div class="product-description">' + product.shortDescription + '</div><a href="' + product.url + '" target="_blank" class="product-cta">Shop Now</div></div></div></div>');
 };
 
 function slideSwitch(arrowVal, productLength) {
@@ -113,7 +113,7 @@ function getProducts() {
 		$('#loader').removeClass('active');
 
 		data.products.forEach(function(product, n) {
-			addProduct(product, n);
+			addProduct(product, n, categoryChoice);
 		});
 
 		// Add active to first product
@@ -139,10 +139,17 @@ function getProducts() {
 	});
 };
 
+// Restart experience
 function restart() {
-	console.log('restart');
+
+	// Remove products from gallery
 	$('#gallery').html('');
+
+	// Hide gallery
 	$('#gallery').removeClass('active');
+
+	// Reset slide counter
+	slideCounter = 0;
 };
 
 // Gallery click events
