@@ -67,6 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/*-- General Styles --*/
 @font-face {
   font-family: pt-sans;
   src: url(../resources/PT_Sans-Web-Regular.ttf);
@@ -75,10 +76,181 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: pt-sans-bold;
   src: url(../resources/PT_Sans-Web-Bold.ttf);
 }
-/* line 13, ../sass/_general.scss */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+@keyframes rotateBack {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes social {
+  0% {
+    width: 5.4em;
+    margin: 0 .4em;
+  }
+  99% {
+    width: 5.4em;
+    margin: 0 .4em;
+  }
+  100% {
+    width: 0em;
+    margin: 0;
+  }
+}
+@keyframes socialBack {
+  0% {
+    width: 0em;
+    margin: 0em;
+  }
+  99% {
+    width: 0em;
+    margin: 0em;
+  }
+  100% {
+    width: 5.4em;
+    margin: 0 .4em;
+  }
+}
+/* line 43, ../sass/_general.scss */
 .container {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  background-color: orange;
+  position: absolute;
+  font-size: 1vw;
+  height: 56.3em;
+  background-color: white;
+}
+/* line 50, ../sass/_general.scss */
+.container * {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: pt-sans, sans-serif;
+}
+
+/*-- Header Styles --*/
+/* line 8, ../sass/_header.scss */
+.header {
+  width: 100%;
+  height: 11.2em;
+  background-color: #2c7dc9;
+}
+
+/* line 13, ../sass/_header.scss */
+.logo,
+.social {
+  position: absolute;
+}
+
+/* line 17, ../sass/_header.scss */
+.logo {
+  width: 11.9em;
+  height: 8.1em;
+  background-image: url("../resources/images/logo.png");
+  top: 1.2em;
+  left: 3.1em;
+}
+
+/* line 24, ../sass/_header.scss */
+.social {
+  background-color: white;
+  right: 0;
+  top: 1.9em;
+  padding: .8em .4em;
+  border-top-left-radius: 4em;
+  border-bottom-left-radius: 4em;
+}
+/* line 33, ../sass/_header.scss */
+.social.closed .close {
+  animation: rotate .25s ease-out 0s forwards;
+}
+/* line 37, ../sass/_header.scss */
+.social.closed .facebook {
+  background-image: url("../resources/images/facebook.png");
+  animation: social 0.05s linear 0s forwards;
+}
+/* line 37, ../sass/_header.scss */
+.social.closed .twitter {
+  background-image: url("../resources/images/twitter.png");
+  animation: social 0.1s linear 0s forwards;
+}
+/* line 37, ../sass/_header.scss */
+.social.closed .pinterest {
+  background-image: url("../resources/images/pinterest.png");
+  animation: social 0.15s linear 0s forwards;
+}
+/* line 37, ../sass/_header.scss */
+.social.closed .google {
+  background-image: url("../resources/images/google.png");
+  animation: social 0.2s linear 0s forwards;
+}
+/* line 37, ../sass/_header.scss */
+.social.closed .youtube {
+  background-image: url("../resources/images/youtube.png");
+  animation: social 0.25s linear 0s forwards;
+}
+
+/* line 44, ../sass/_header.scss */
+.social-icon,
+.close {
+  margin: 0 .4em;
+  border-radius: 100%;
+  position: relative;
+  display: inline-block;
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* line 53, ../sass/_header.scss */
+.social-icon {
+  width: 5.4em;
+  height: 5.4em;
+}
+
+/* line 57, ../sass/_header.scss */
+.close {
+  width: 3.2em;
+  height: 3.2em;
+  vertical-align: top;
+  margin: 1.1em .8em 1.1em 1.2em;
+  background-image: url("../resources/images/close.png");
+  animation: rotateBack .25s ease-out 0s forwards;
+}
+
+/* line 67, ../sass/_header.scss */
+.facebook {
+  background-image: url("../resources/images/facebook.png");
+  animation: socialBack 0.05s linear 0s forwards;
+}
+
+/* line 67, ../sass/_header.scss */
+.twitter {
+  background-image: url("../resources/images/twitter.png");
+  animation: socialBack 0.1s linear 0s forwards;
+}
+
+/* line 67, ../sass/_header.scss */
+.pinterest {
+  background-image: url("../resources/images/pinterest.png");
+  animation: socialBack 0.15s linear 0s forwards;
+}
+
+/* line 67, ../sass/_header.scss */
+.google {
+  background-image: url("../resources/images/google.png");
+  animation: socialBack 0.2s linear 0s forwards;
+}
+
+/* line 67, ../sass/_header.scss */
+.youtube {
+  background-image: url("../resources/images/youtube.png");
+  animation: socialBack 0.25s linear 0s forwards;
 }

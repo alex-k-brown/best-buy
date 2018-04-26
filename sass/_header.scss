@@ -1,0 +1,71 @@
+/*-- Header Styles --*/
+
+// Social Lists
+$social: facebook, twitter, pinterest, google, youtube;
+$socialTime: .05s, .1s, .15s, .2s, .25s;
+$backTime: .25s, .2s, .15s, .1s, .05s;
+
+.header {
+	width: 100%;
+	height: 11.2em;
+	background-color: $bestBuyBlue;
+}
+.logo,
+.social {
+	position: absolute;
+}
+.logo {
+	width: 11.9em;
+	height: 8.1em;
+	background-image: url('../resources/images/logo.png');
+	top: 1.2em;
+	left: 3.1em;
+}
+.social {
+	background-color: white;
+	right: 0;
+	top: 1.9em;
+	padding: .8em .4em;
+	border-top-left-radius: 4em;
+	border-bottom-left-radius: 4em;
+
+	&.closed {
+		.close {
+			animation: rotate .25s ease-out 0s forwards;
+		}
+		@for $i from 1 through 5 {
+			.#{nth($social, $i)} {
+				background-image: url('../resources/images/#{nth($social, $i)}.png');
+				animation: social #{nth($socialTime, $i)} linear 0s forwards;
+			}
+		}
+	}
+}
+.social-icon,
+.close {
+	margin: 0 .4em;
+	border-radius: 100%;
+	position: relative;
+	display: inline-block;
+	background-size: cover;
+	cursor: pointer;
+}
+.social-icon {
+	width: 5.4em;
+	height: 5.4em;
+}
+.close {
+	width: 3.2em;
+	height: 3.2em;
+	vertical-align: top;
+	margin: 1.1em .8em 1.1em 1.2em;
+	background-image: url('../resources/images/close.png');
+	animation: rotateBack .25s ease-out 0s forwards;
+}
+
+@for $i from 1 through 5 {
+	.#{nth($social, $i)} {
+		background-image: url('../resources/images/#{nth($social, $i)}.png');
+		animation: socialBack #{nth($socialTime, $i)} linear 0s forwards;
+	}
+}
