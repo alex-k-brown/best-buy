@@ -1,0 +1,124 @@
+/*-- Gallery Styles --*/
+
+.gallery,
+.product,
+.product-image,
+.image-container,
+.product-info,
+.info-container,
+.arrow {
+	position: absolute;
+}
+.gallery,
+.product {
+	width: 100%;
+	height: 45.1em;
+	background-color: white;
+}
+.gallery {
+	display: none;
+	overflow: hidden;
+
+	&.active {
+		display: block;
+	}
+	* {
+		color: $bestBuyBlue;
+	}
+}
+.product {
+	transform: translateX(100em);
+
+	&.active {
+		animation: slideLeft .5s ease-out 0s forwards;
+	}
+	&.back-active {
+		animation: slideRight .5s ease-out 0s forwards;
+	}
+}
+.product-image,
+.product-info {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.image-container {
+	height: 100%;
+	width: 53.4em;
+	left: 0;
+}
+.product-image {
+	max-width: 46.8em;
+	max-height: 31.4em;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.product-info {
+	width: 46.9em;
+	height: 36.4em;
+	right: 0;
+	border-left: .2em solid black;
+}
+.info-container,
+.arrow {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.info-container {
+	width: 100%;
+}
+.product-price,
+.product-name,
+.product-description,
+.product-cta {
+	position: relative;
+	margin: 0 0 0 4.9vw;
+	display: block;
+}
+.product-price,
+.product-cta {
+	font-family: pt-sans-bold, sans-serif;
+}
+.product-price {
+	font-size: 4.5em;
+    margin: 0 0 1vw 4.9vw;
+}
+.product-name,
+.product-description {
+	font-size: 1.9em;
+    line-height: 2.5vw;
+    width: 34vw;
+}
+.product-cta {
+	background-color: $ctaOrange;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	width: 33.1vw;
+	height: 5.8vw;
+	border-radius: 1vw;
+	font-size: 3vw;
+	line-height: 5.8vw;
+	text-align: center;
+	margin: 1vw 0 0 4.9vw;
+	animation: shrink .25s ease-out 0s forwards;
+	transform-origin: left;
+
+	&:hover {
+		animation: grow .25s ease-out 0s forwards;
+	};
+}
+.arrow {
+	width: 2.9em;
+	height: 7.1em;
+	right: 0;
+	background-image: url('../resources/images/arrow-right.png');
+	cursor: pointer;
+
+	&.hide {
+		display: none;
+	}
+}
+.arrow-left {
+	left: 0;
+	background-image: url('../resources/images/arrow-left.png');
+}
